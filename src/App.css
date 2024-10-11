@@ -1,0 +1,79 @@
+/* Ensures the app takes up the full height and width with no margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Full-screen container */
+.page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.right-section {
+  flex: 1;
+  background-image: url('./pexels-kindelmedia-9875418.jpg');
+  background-size: cover;
+  background-position: center;
+  border-left: 1px solid #000;
+}
+
+/* Style for the form container */
+.form-container {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centers content horizontally */
+}
+
+/* Add space between the input fields */
+input {
+  margin: 20px 0; /* Increased margin for better spacing */
+  padding: 15px;
+  width: 80%;
+  font-size: 1.1rem; /* Larger font size */
+}
+
+/* Make the button larger and more prominent, and ensure it's centered below inputs */
+#nextButtonPage1 {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  padding: 15px 30px; /* Larger button */
+  font-size: 1.2rem;
+  margin-top: 10px;
+  width: 20%;  /* Match the width of input fields */
+  cursor: pointer;
+}
+
+#nextButtonPage1:hover {
+  background-color: #45a049;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  margin-bottom: 10px;
+}

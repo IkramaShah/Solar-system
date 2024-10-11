@@ -1,0 +1,59 @@
+.page-4 {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Full height */
+    text-align: center; /* Center text */
+    padding: 0;
+}
+
+input[type="number"] {
+    width: 80%; /* Adjust width as necessary */
+    padding: 10px; /* Add padding */
+    margin: 10px 0; /* Space between input fields */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Slightly round corners */
+}
+
+#nextButtonPage4 {
+    width: 20%; /* Full width */
+    padding: 10px; /* Adjust padding */
+    font-size: 16px; /* Set font size */
+    background-color: #ffc107; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Slightly round corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+#nextButtonPage4:hover {
+    background-color: #ff9800; /* Change background on hover */
+}
+.footer {
+    background-color: #4c4d4c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+  }
+  
+  .footer-content {
+    margin-bottom: 10px;
+  }
+  
+  .footer h4 {
+    margin: 10px 0;
+  }
+  
+  .footer h5 {
+    margin: 5px 0;
+  }

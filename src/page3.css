@@ -1,0 +1,153 @@
+/* Reset any default margin on the body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+    margin-bottom: 0; /* Remove bottom margin from the navbar */
+}
+
+/* Background image styles */
+.background-image1 {
+    background-image: url('./pexels-orlando-s-197680330-13205474.jpg');
+    background-size: cover; /* Cover the area */
+    background-position: center; /* Center the image */
+    height: 50vh; /* Set height */
+    min-height: 200px; /* Set a minimum height */
+    width: 100%; /* Full width */
+    padding-top: 0; /* Zero padding */
+    margin: 0; /* Ensure no margin */
+}
+
+/* Page content styles */
+.page-3 {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Start from the top */
+    height: calc(100vh - 50vh); /* Adjust height to fill remaining space */
+    padding: 0;
+    margin-top: 20px; /* Add margin to move it down from the image */
+}
+
+/* Box for Select House Size */
+.select-house-size {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 20px 0; /* Margin above and below the box */
+    width: 90%; /* Width of the box */
+    max-width: 600px; /* Maximum width */
+    text-align: center; /* Center text inside the box */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Set a specific font size */
+    margin: 10px; /* Space between buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Slightly round corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Button colors */
+#size3ButtonPage3 {
+    background-color: #ff5722;
+    color: white;
+}
+
+#size5ButtonPage3 {
+    background-color: #8bc34a;
+    color: white;
+}
+
+#size7ButtonPage3 {
+    background-color: #009688;
+    color: white;
+}
+
+#size10ButtonPage3 {
+    background-color: #3f51b5;
+    color: white;
+}
+
+/* Button hover effects */
+button:hover {
+    opacity: 0.9; /* Slightly fade the button */
+    transform: translateY(-2px); /* Lift the button slightly */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Specific button hover styles (optional) */
+#size3ButtonPage3:hover {
+    background-color: #e64a19; /* Darker shade for hover effect */
+}
+
+#size5ButtonPage3:hover {
+    background-color: #7cb342; /* Darker shade for hover effect */
+}
+
+#size7ButtonPage3:hover {
+    background-color: #00796b; /* Darker shade for hover effect */
+}
+
+#size10ButtonPage3:hover {
+    background-color: #303f9f; /* Darker shade for hover effect */
+}
+
+#size20ButtonPage3 {
+    background-color: #e91e63;
+    color: white;
+}
+
+#size20ButtonPage3:hover {
+    background-color: #d81b60; /* Darker shade for hover effect */
+}
+
+/* Additional styles for the back arrow icon */
+.navbar .bi-arrow-90deg-left {
+    cursor: pointer; /* Change cursor on hover */
+    margin-left: auto; /* Align to the right */
+    margin-right: 15px; /* Space from the right edge */
+    font-weight: bold; /* Make the icon bold */
+    font-size: 24px; /* Increase size for better visibility */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+    color: white; /* Ensure the color is white */
+}
+
+.navbar .bi-arrow-90deg-left:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+.footer {
+    background-color: #4c4d4c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+  }
+  
+  .footer-content {
+    margin-bottom: 10px;
+  }
+  
+  .footer h4 {
+    margin: 10px 0;
+  }
+  
+  .footer h5 {
+    margin: 5px 0;
+  }
