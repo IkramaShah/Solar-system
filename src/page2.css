@@ -128,14 +128,17 @@
     height: auto;
   }
   
-  /* Footer styles */
   .footer {
     background-color: #4c4d4c;
-    color: white;
+    color: white !important; /* Make the text color white and apply it with higher priority */
     text-align: center;
     padding: 20px 0;
     width: 100%;
     margin-top: auto; /* Pushes footer to the bottom */
+  }
+  
+  .footer h4, .footer h5, .footer p {
+    color: white !important; /* Ensure all text inside the footer is white */
   }
   
   .footer-columns {
@@ -172,3 +175,4 @@
     opacity: 1;
     transform: translateX(0);
   }
+  

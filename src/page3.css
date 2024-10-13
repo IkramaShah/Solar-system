@@ -125,7 +125,7 @@ button:hover {
     transform: scale(1.1); /* Scale up on hover */
 }
 .footer {
-    background-color: #4c4d4c;
+    background-color: #012483;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -151,3 +151,4 @@ button:hover {
   .footer h5 {
     margin: 5px 0;
   }
+  

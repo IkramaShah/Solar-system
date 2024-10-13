@@ -10,6 +10,21 @@ function Page3() {
     navigate('/page2'); // Navigate to Page 2
   };
 
+  const handleMarla3Click = () => {
+    navigate('/marla3'); // Navigate to the Marla3 page when button is clicked
+  };
+
+  const handleMarla7Click = () => {
+    navigate('/marla7'); // Navigate to the Marla7 page when button is clicked
+  };
+
+  const handleMarla10Click = () => {
+    navigate('/marla10'); // Navigate to the Marla10 page when button is clicked
+  };
+  const handleKanalClick = () => {
+    navigate('/Kanal'); // Navigate to the Marla10 page when button is clicked
+  };
+  
   return (
     <>
       {/* Navbar */}
@@ -46,13 +61,16 @@ function Page3() {
       <div className="page page-3">
         <div className="select-house-size">
           <h2>Select House Size</h2>
-          <button id="size3ButtonPage3" onClick={() => navigate('/page4')}>3 Marla</button>
-          <button id="size5ButtonPage3" onClick={() => navigate('/page4')}>5 Marla</button>
-          <button id="size7ButtonPage3" onClick={() => navigate('/page4')}>7 Marla</button>
-          <button id="size10ButtonPage3" onClick={() => navigate('/page4')}>10 Marla</button>
-          <button id="size20ButtonPage3" onClick={() => navigate('/page4')}>1 Kanal</button>
+          {/* Navigate to Marla3 page when clicked */}
+          <button id="size3ButtonPage3" onClick={handleMarla3Click}>3 Marla</button>
+          <button id="size5ButtonPage3" onClick={handleMarla3Click}>5 Marla</button>
+          <button id="size7ButtonPage3" onClick={handleMarla7Click}>7 Marla</button>
+          {/* Update 10 Marla button to navigate to Marla10 */}
+          <button id="size10ButtonPage3" onClick={handleMarla10Click}>10 Marla</button>
+          <button id="size20ButtonPage3" onClick={handleKanalClick}>1 Kanal</button>
         </div>
       </div>
+      
       {/* Footer */}
       <footer className="footer">
         <h4>Contact Information</h4>

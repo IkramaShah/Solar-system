@@ -73,28 +73,29 @@ function Page4({ setPage }) {
       </div>
       {/* Footer */}
       <footer className="footer">
-        <h4>Contact Information</h4>
-        <div className="footer-columns">
-          <div className="footer-content">
+    <h4>Contact Information</h4>
+    <div className="footer-columns">
+        <div className="footer-content">
             <h5>Kashan Saeed</h5>
             <p>Email: kashanmiankhel@gmail.com</p>
             <p>Phone: +92 333 1530855</p>
-          </div>
-          <div className="footer-content">
+        </div>
+        <div className="footer-content">
             <h5>Khadeen Faiz</h5>
             <p>Email: khadeenfaiz@gmail.com</p>
             <p>Phone: +92 318 9177303</p>
-          </div>
-          <div className="footer-content">
+        </div>
+        <div className="footer-content">
             <h5>Ikrama Shah</h5>
             <p>Email: ikramashah@gmail.com</p>
             <p>Phone: +92 315 5529798</p>
-          </div>
         </div>
-        <div className="footer-copyright">
-          <p>&copy; {new Date().getFullYear()} Solar Panels. All rights reserved.</p>
-        </div>
-      </footer>
+    </div>
+    <div className="footer-copyright">
+        <p>&copy; {new Date().getFullYear()} Solar Panels. All rights reserved.</p>
+    </div>
+</footer>
+
     </>
   );
 }
