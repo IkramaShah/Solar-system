@@ -9,6 +9,7 @@ import Marla3 from './Marla3'; // Import Marla3
 import Marla7 from './Marla7'; // Import Marla7
 import Marla10 from './Marla10'; // Import Marla10
 import Kanal from './Kanal'; // Import kanal
+import Page5 from './Page5';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -23,15 +24,22 @@ function App() {
   };
 
   const handleNextPage = () => {
-    // Input validation for mobile number and name
+    // Input validation for mobile number, name, and ensuring fields are filled
+    if (!userData.name || !userData.mobile) {
+      setError('Please fill out all fields.');
+      return;
+    }
+
     if (userData.mobile.length !== 11) {
       setError('Mobile number must be exactly 11 digits.');
       return;
     }
+    
     if (userData.name.length > 40) {
       setError('Name must be 40 characters or less.');
       return;
     }
+
     // Navigate to Page 2 after successful validation
     navigate('/page2');
   };
@@ -44,19 +52,21 @@ function App() {
             <h1>Enter Your Details</h1>
             {error && <p className="error">{error}</p>}
             <input
-              type="text"
-              name="name"
-              placeholder="Enter Your Name"
-              value={userData.name}
-              onChange={handleInputChange}
-            />
-            <input
-              type="tel"
-              name="mobile"
-              placeholder="Enter Your Mobile Number"
-              value={userData.mobile}
-              onChange={handleInputChange}
-            />
+  type="text"
+  name="name"
+  className="name-input"
+  placeholder="Enter Your Name"
+  value={userData.name}
+  onChange={handleInputChange}
+/>
+<input
+  type="tel"
+  name="mobile"
+  className="mobile-input"
+  placeholder="Enter Your Mobile Number"
+  value={userData.mobile}
+  onChange={handleInputChange}
+/>
             <button id="nextButtonPage1" onClick={handleNextPage}>Log In</button>
           </div>
         </div>
@@ -75,10 +85,11 @@ function AppWithRouter() {
         <Route path="/page2" element={<Page2 />} />
         <Route path="/page3" element={<Page3 />} /> {/* Route to Page3 */}
         <Route path="/page4" element={<Page4 />} /> {/* Route to Page4 */}
+        <Route path="/page5" element={<Page5 />} />
         <Route path="/marla3" element={<Marla3 />} /> {/* Route to Marla3 */}
         <Route path="/marla7" element={<Marla7 />} /> {/* Route to Marla7 */}
         <Route path="/marla10" element={<Marla10 />} /> {/* Route to Marla10 */}
-        <Route path="/Kanal" element={<Kanal />} /> {/* Route to Marla10 */}
+        <Route path="/Kanal" element={<Kanal />} /> {/* Route to Kanal */}
         <Route path="/about" element={<About />} /> {/* Route to About Page */}
       </Routes>
     </Router>

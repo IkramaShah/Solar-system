@@ -106,7 +106,7 @@ const Marla3 = () => {
         <p></p>
         
         <p>
-          You can run up to 4000W of load appliances on a 4KW solar system. An <a href="https://solarpanelpricepakistan.pk/appliance-load-calculator/" target="_blank" rel="noopener noreferrer">Appliance Load Calculator</a> can be used for calculating the total load of home appliances you want to run on the 4kW solar system. The most common and necessary devices for a home that you can run on a 4KW solar system are shown below.
+          You can run up to 4000W of load appliances on a 4KW solar system. An Appliance Load Calculator can be used for calculating the total load of home appliances you want to run on the 4kW solar system. The most common and necessary devices for a home that you can run on a 4KW solar system are shown below.
         </p>
 
         <table>

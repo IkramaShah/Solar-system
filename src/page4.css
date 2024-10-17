@@ -1,65 +1,81 @@
-.page-4 {
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  min-height: 80vh; /* Adjust to make it shorter */
-  text-align: center; /* Center text */
-  padding: 20px; /* Add some padding */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-input[type="number"] {
-  width: 80%; /* Adjust width as necessary */
-  padding: 10px; /* Add padding */
-  margin: 10px 0; /* Space between input fields */
-  border: 1px solid #ccc; /* Add border */
-  border-radius: 5px; /* Slightly round corners */
+#appliance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-#nextButtonPage4 {
-  width: 20%; /* Adjust width as necessary */
-  padding: 10px; /* Adjust padding */
-  font-size: 16px; /* Set font size */
-  background-color: #ffc107; /* Background color */
-  color: white; /* Text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Slightly round corners */
-  cursor: pointer; /* Change cursor on hover */
+#appliance-table th, #appliance-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
 }
 
-#nextButtonPage4:hover {
-  background-color: #ff9800; /* Change background on hover */
+.appliance-input { /* Specific styles for appliance input fields */
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff9800;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
 
 .footer {
-  background-color: #4c4d4c; /* Footer background color */
-  color: white; /* Text color */
-  text-align: center; /* Center all text within the footer */
-  padding: 20px 0; /* Vertical padding */
-  width: 100%; /* Full width */
-  margin-top: auto; /* Pushes footer to the bottom */
+  background-color: #4c4d4c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
 }
 
 .footer-columns {
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center columns horizontally */
-  gap: 40px; /* Space between columns */
-  margin: 20px 0; /* Vertical margin */
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
 }
 
 .footer-content {
-  margin-bottom: 10px; /* Space below each content block */
+  margin-bottom: 10px;
 }
 
 .footer h4 {
-  margin: 10px 0; /* Margin around the h4 */
+  margin: 10px 0;
 }
 
 .footer h5 {
-  margin: 5px 0; /* Margin around the h5 */
-}
-
-.footer-copyright {
-  margin-top: 20px; /* Space above copyright text */
-  text-align: center; /* Center the copyright text */
+  margin: 5px 0;
 }
