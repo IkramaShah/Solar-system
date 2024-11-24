@@ -1,19 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'; 
+import { Link, useNavigate } from 'react-router-dom';  // Import useNavigate
 import './marla7.css';
 import backgroundImage from './Screenshot 2024-10-12 104934.png';
 
 const Marla3 = () => {
+  const navigate = useNavigate();  // Initialize navigate
+
   return (
     <>
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <a className="navbar-brand" href="#"><b>Solar Panels</b></a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/" style={{ color: 'white' }}>
+                <Link className="nav-link active" aria-current="page" to="/Page2" style={{ color: 'white' }}>
                   Home
                 </Link>
               </li>
@@ -23,6 +36,24 @@ const Marla3 = () => {
                 </Link>
               </li>
             </ul>
+            <div className="d-flex align-items-center">
+              <button className="btn btn-danger logout-btn me-2">Logout</button>
+              <div onClick={() => navigate("/Page3")} style={{ cursor: 'pointer' }}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="white"
+                  className="bi bi-arrow-90deg-left"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -173,87 +204,28 @@ const Marla3 = () => {
               <td>80,000</td>
             </tr>
             <tr>
-              <td>Inverter 2KW</td>
+              <td>Inverter 1.5 ton</td>
               <td>1</td>
-              <td>60,000</td>
-              <td>60,000</td>
+              <td>90,000</td>
+              <td>90,000</td>
             </tr>
             <tr>
-              <td>Batteries - 12volt</td>
-              <td>3</td>
+              <td>Batteries - 12volt 200ah</td>
+              <td>2</td>
               <td>35,000</td>
-              <td>105,000</td>
-            </tr>
-            <tr>
-              <td>Miscellaneous (Wires, connectors, etc.)</td>
-              <td>-</td>
-              <td>-</td>
-              <td>18,000</td>
+              <td>70,000</td>
             </tr>
             <tr>
               <td>Panel Structure</td>
               <td>-</td>
               <td>-</td>
-              <td>18,000</td>
-            </tr>
-            <tr>
-              <td>Installation Cost</td>
-              <td>-</td>
-              <td>-</td>
-              <td>8,000</td>
-            </tr>
-            <tr className="highlight">
-              <td>Total Cost</td>
-              <td>-</td>
-              <td>-</td>
-              <td>289,000</td>
-            </tr>
-          </tbody>
-        </table>
-        <h3 className="f">5kw Solar System</h3>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p>If we sum all these on the average 5kw solar system is required if you want to use all the appliances accurately and this will increase the number of appliances to work at a time.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Component</th>
-              <th>Quantity</th>
-              <th>Price Per Unit</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Solar Panels – 550 watt</td>
-              <td>9</td>
-              <td>20,000</td>
-              <td>180,000</td>
-            </tr>
-            <tr>
-              <td>Inverter 5KW</td>
-              <td>1</td>
-              <td>170,000</td>
-              <td>170,000</td>
-            </tr>
-            <tr>
-              <td>Batteries - 12volt</td>
-              <td>4</td>
-              <td>35,000</td>
-              <td>140,000</td>
+              <td>15,000</td>
             </tr>
             <tr>
               <td>Miscellaneous (Wires, connectors, etc.)</td>
               <td>-</td>
               <td>-</td>
-              <td>45,000</td>
-            </tr>
-            <tr>
-              <td>Panel Structure</td>
-              <td>-</td>
-              <td>-</td>
-              <td>45,000</td>
+              <td>25,000</td>
             </tr>
             <tr>
               <td>Installation Cost</td>
@@ -265,37 +237,14 @@ const Marla3 = () => {
               <td>Total Cost</td>
               <td>-</td>
               <td>-</td>
-              <td>595,000</td>
+              <td>295,000</td>
             </tr>
           </tbody>
         </table>
+
+        <h3 className="f">Example:</h3>
+        <p className="g">Let's assume you have a 3KW solar system installed with inverter AC and other devices. The total cost of this system is 380,000. For a household of 3-4 people, this system will provide sufficient power to run essential appliances like fans, lights, and washing machines. Additional load from inverter AC can be easily managed with this system.</p>
       </div>
-
-      {/* Footer */}
-      <footer className="footer">
-    <h4>Contact Information</h4>
-    <div className="footer-columns">
-        <div className="footer-content">
-            <h5>Kashan Saeed</h5>
-            <p>Email: kashanmiankhel@gmail.com</p>
-            <p>Phone: +92 333 1530855</p>
-        </div>
-        <div className="footer-content">
-            <h5>Khadeen Faiz</h5>
-            <p>Email: khadeenfaiz@gmail.com</p>
-            <p>Phone: +92 318 9177303</p>
-        </div>
-        <div className="footer-content">
-            <h5>Ikrama Shah</h5>
-            <p>Email: ikramashah@gmail.com</p>
-            <p>Phone: +92 315 5529798</p>
-        </div>
-    </div>
-    <div className="footer-copyright">
-        <p>&copy; {new Date().getFullYear()} Solar Panels. All rights reserved.</p>
-    </div>
-</footer>
-
     </>
   );
 };

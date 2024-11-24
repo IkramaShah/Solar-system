@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import './page2.css';
 import screenshot1 from './Screenshot 2024-10-07 173804.png';
 import screenshot2 from './Screenshot 2024-10-07 173945.png';
-import backgroundImage from './pexels-olly-3782817.jpg';
 
 const Page2 = () => {
   const navigate = useNavigate();
@@ -14,6 +13,10 @@ const Page2 = () => {
 
   const handleViewClick = () => {
     navigate('/Page3');
+  };
+
+  const handleLogoutClick = () => {
+    navigate('/'); // Navigate to the App.js page
   };
 
   useEffect(() => {
@@ -44,16 +47,6 @@ const Page2 = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link 
-                  className="nav-link active" 
-                  aria-current="page" 
-                  to="/" 
-                  style={{ color: 'white' }}
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link 
                   className="nav-link" 
                   to="/about" 
                   style={{ color: 'white' }}
@@ -62,6 +55,14 @@ const Page2 = () => {
                 </Link>
               </li>
             </ul>
+            {/* Logout Button */}
+            <button 
+              className="btn btn-danger" 
+              onClick={handleLogoutClick}
+              style={{ marginLeft: 'auto' }}
+            >
+              Logout
+            </button>
           </div>
         </div>
       </nav>

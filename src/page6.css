@@ -1,0 +1,53 @@
+.receipt-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .receipt-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .receipt-container p {
+    font-size: 16px;
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .print-button,
+  .add-to-cart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .print-button {
+    background-color: #28a745;
+  }
+  
+  .print-button:hover {
+    background-color: #218838;
+  }
+  
+  .add-to-cart-button {
+    background-color: #007bff;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #0056b3;
+  }

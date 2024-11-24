@@ -22,19 +22,34 @@ function Page4() {
   };
 
   const calculateTotalLoad = () => {
+    // Validate the appliance data
+    for (let appliance of appliances) {
+      const watts = parseInt(appliance.watts) || 0;
+      const quantity = parseInt(appliance.quantity) || 0;
+
+      if (watts <= 0 || quantity <= 0) {
+        alert('Watts and quantity must be greater than 0 for all appliances.');
+        return; // Stop further execution if invalid data is found
+      }
+    }
+
     const total = appliances.reduce((acc, appliance) => {
       const watts = parseInt(appliance.watts) || 0;
       const quantity = parseInt(appliance.quantity) || 0;
       return acc + watts * quantity;
     }, 0);
+
     setTotalLoad(total);
   };
 
   // Function to validate the form
   const isFormValid = () => {
     for (let appliance of appliances) {
-      if (!appliance.name || !appliance.watts || !appliance.quantity) {
-        return false; // Return false if any field is empty
+      const watts = parseInt(appliance.watts) || 0;
+      const quantity = parseInt(appliance.quantity) || 0;
+
+      if (!appliance.name || watts <= 0 || quantity <= 0) {
+        return false; // Return false if any field is invalid
       }
     }
     return true;
@@ -45,32 +60,60 @@ function Page4() {
     if (isFormValid()) {
       navigate('/page5');
     } else {
-      alert('Please fill out all appliance details before proceeding.');
+      alert('Please fill out all appliance details with valid values before proceeding.');
     }
   };
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#"><b>Solar Panels</b></a>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" to="/" style={{ color: 'white' }}>Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about" style={{ color: 'white' }}>About</Link>
-              </li>
-            </ul>
-          </div>
-          <div onClick={handleBackClick} style={{ cursor: 'pointer', marginLeft: 'auto' }}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" className="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
-              <path fillRule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z" />
-            </svg>
-          </div>
+     <nav className="navbar navbar-expand-lg">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#"><b>Solar Panels</b></a>
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/Page2" style={{ color: 'white' }}>
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/about" style={{ color: 'white' }}>
+            About
+          </Link>
+        </li>
+      </ul>
+      <div className="d-flex align-items-center">
+        <button className="btn btn-danger logout-btn me-2">Logout</button>
+        <div onClick={handleBackClick} style={{ cursor: 'pointer' }}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="white"
+            className="bi bi-arrow-90deg-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fillRule="evenodd"
+              d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708z"
+            />
+          </svg>
         </div>
-      </nav>
+      </div>
+    </div>
+  </div>
+</nav>
 
       <div className="container">
         <h2>Appliance Load Calculator</h2>
