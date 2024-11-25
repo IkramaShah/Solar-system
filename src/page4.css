@@ -32,13 +32,15 @@
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
+.next-button-container{
+text-align: center;
+}
 button {
   padding: 10px 20px;
   background-color: #ffc107;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
